@@ -56,7 +56,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="FifoGroup.Serialize">
-    <Position X="8.25" Y="6.25" Width="1.5" />
+    <Position X="8.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Serialize.cs</FileName>
