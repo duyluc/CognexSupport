@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FifoGroup.AcqFifo">
+    <Position X="10.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAQAAAAAEAAAAAAAAAAAAAAAAAAAAAAEACAAAAA=</HashCode>
+      <FileName>AcqFifo.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AcqFifoInfo" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="ExcuteGroups" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="FifoGroup.AcqFifoInfo">
+    <Position X="7.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAgAAAAAAAAAAAAAEAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>AcqFifoInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FifoGroup.ExcuteGroup">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAQABAAAAAAAAAAQ=</HashCode>
+      <FileName>ExcuteGroup.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AcqFifo" />
+      <Property Name="AcqFifoParams" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="FifoGroup.AcqFifoParams">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AcqFifoParams.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FifoGroup.ExcuteTool">
+    <Position X="15.5" Y="2.75" Width="2" />
+    <AssociationLine Name="ExcuteGroup" Type="FifoGroup.ExcuteGroup" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.5" Y="3.75" />
+        <Point X="14.25" Y="3.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAgAAAAAIAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ExcuteTool.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ExcuteGroup" />
+      <Property Name="ExcuteToolParams" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="FifoGroup.Serialize">
+    <Position X="8.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Serialize.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FifoGroup.ExcuteToolParam">
+    <Position X="22.5" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAQAAAAAAIAAAQAgAAAAAAA=</HashCode>
+      <FileName>ExcuteToolParam.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FifoGroup.ExcuteToolParams">
+    <Position X="19.25" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAABAQCCAIBAQAABAAAAAEAAAAAABQIAA=</HashCode>
+      <FileName>ExcuteToolParams.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="innerDictionaty" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FifoGroup.ExcuteToolParamEnumerator">
+    <Position X="22.25" Y="5.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAABAAAAACAAAAAAAAAAAAAoAABAQIAACA=</HashCode>
+      <FileName>ExcuteToolParamEnumerator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
