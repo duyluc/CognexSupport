@@ -6,14 +6,13 @@ namespace FifoGroup
     {
         public string ExcuteGroupID { get; set; }
         public Dictionary<string, ExcuteTool> ToolBlocks { get; set; }
+        public AcqFifoInfo AcqFifoInfo { get; set; }
         public AcqFifo AcqFifo { get; set; }
-        public AcqFifoParams AcqFifoParams { get; set; }
-        public ExcuteGroup(string groupID, AcqFifo acqFifo)
+        public ExcuteGroup(string groupID)
         {
             ExcuteGroupID = groupID;
-            AcqFifo = acqFifo;
+            AcqFifo = new AcqFifo(AcqFifoInfo);
             ToolBlocks = new Dictionary<string, ExcuteTool>();
-            this.AcqFifoParams = new AcqFifoParams();
         }
     }
 }

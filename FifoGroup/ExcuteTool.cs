@@ -12,22 +12,24 @@ namespace FifoGroup
         public CogToolBlock ToolBlock { get; set; }
         public ExcuteGroup ExcuteGroup { get; set; }
         public ExcuteToolParams ExcuteToolParams { get; set; }
-        public ExcuteTool(string iD, string toolBlockPath, ExcuteGroup excuteGroup)
+        public AcqFifoParams AcqFifoParams { get; set; }
+        public AcqFifo AcqFifo { get;set; }
+        public ExcuteTool(string iD, string toolBlockPath, AcqFifo acqFifo)
         {
             if(string.IsNullOrEmpty(iD)) throw new ArgumentNullException(nameof(iD));
             if(string.IsNullOrEmpty(toolBlockPath)) throw new ArgumentNullException(nameof(toolBlockPath));
+            this.AcqFifo = acqFifo;
             this.ID = iD;
             this.ToolBlock = Serialize.LoadToolBlock(toolBlockPath) as CogToolBlock;
-            this.ExcuteGroup = excuteGroup;
             this.ExcuteToolParams = new ExcuteToolParams();
         }
 
-        public ExcuteTool(string iD, CogToolBlock cogToolBlock, ExcuteGroup excuteGroup)
+        public ExcuteTool(string iD, CogToolBlock cogToolBlock, AcqFifo acqFifo)
         {
             if (string.IsNullOrEmpty(iD)) throw new ArgumentNullException(nameof(iD));
+            this.AcqFifo = acqFifo;
             this.ID = iD;
             this.ToolBlock = cogToolBlock;
-            this.ExcuteGroup = excuteGroup;
         }
     }
 }
