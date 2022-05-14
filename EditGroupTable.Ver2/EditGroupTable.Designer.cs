@@ -78,6 +78,7 @@
             this.Datagridview.Location = new System.Drawing.Point(0, 39);
             this.Datagridview.Margin = new System.Windows.Forms.Padding(0);
             this.Datagridview.Name = "Datagridview";
+            this.Datagridview.RowHeadersWidth = 25;
             this.Datagridview.Size = new System.Drawing.Size(283, 267);
             this.Datagridview.TabIndex = 0;
             // 
