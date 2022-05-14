@@ -15,6 +15,14 @@ namespace Test_Winform
         public Form1()
         {
             InitializeComponent();
+            try
+            {
+                this.EditGroupTable.InitialTable();
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
     }
 }

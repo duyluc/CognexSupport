@@ -10,7 +10,7 @@ namespace FifoGroup
         {
             public int Id { get; set; }
             public string GroupId { get; set; }
-            public string CameraSerialName { get; set; }
+            public string CameraSerialNumber { get; set; }
         }
         static public void SaveGroupID(ExcuteGroupData group)
         {
@@ -39,6 +39,12 @@ namespace FifoGroup
             if (string.IsNullOrEmpty(DatabaseFilePath)) throw new NullReferenceException(nameof(DatabaseFilePath));
             if (group == null) throw new NullReferenceException(nameof(group));
             DbProvider.EditRecord(DatabaseFilePath, group, "GroupId");
+        }
+        static public void DeleteAllGroups()
+        {
+            if (!Directory.Exists(".\\Database")) throw new DbProvider.DatabaseNotExist();
+            if (string.IsNullOrEmpty(DatabaseFilePath)) throw new NullReferenceException(nameof(DatabaseFilePath));
+            DbProvider.DeleteAll<ExcuteGroupData>(DatabaseFilePath);
         }
     }
 }

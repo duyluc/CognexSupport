@@ -58,7 +58,7 @@ namespace EditGroupTable.Ver1
                 ExcuteGroupDbProvider.ExcuteGroupData newGroup = new ExcuteGroupDbProvider.ExcuteGroupData
                 {
                     GroupId = this.Datagridview.Rows[this.ValidedRow].Cells[0].Value.ToString(),
-                    CameraSerialName = this.Datagridview.Rows[this.ValidedRow].Cells[1].Value.ToString()
+                    CameraSerialNumber = this.Datagridview.Rows[this.ValidedRow].Cells[1].Value.ToString()
                 };
                 ExcuteGroupDbProvider.SaveGroupID(newGroup);
                 this.ValidedRow++;
@@ -84,7 +84,7 @@ namespace EditGroupTable.Ver1
                 DataGridViewTextBoxCell groupid = new DataGridViewTextBoxCell();
                 groupid.Value = group.GroupId;
                 DataGridViewTextBoxCell cameraserialnumber = new DataGridViewTextBoxCell();
-                cameraserialnumber.Value = group.CameraSerialName;
+                cameraserialnumber.Value = group.CameraSerialNumber;
                 newrow.Cells.AddRange(new DataGridViewCell[2]{ groupid,cameraserialnumber });
                 this.Datagridview.Rows.Add(newrow);
             }
@@ -106,7 +106,7 @@ namespace EditGroupTable.Ver1
                 ExcuteGroupDbProvider.ExcuteGroupData deletegroup = new ExcuteGroupDbProvider.ExcuteGroupData
                 {
                     GroupId = _groupid,
-                    CameraSerialName = _camserial,
+                    CameraSerialNumber = _camserial,
                 };
                 ExcuteGroupDbProvider.DeleteGoupID(deletegroup);
                 this.Datagridview.Rows.Remove(this.Datagridview.CurrentRow);
@@ -134,7 +134,7 @@ namespace EditGroupTable.Ver1
                 ExcuteGroupDbProvider.ExcuteGroupData deletegroup = new ExcuteGroupDbProvider.ExcuteGroupData
                 {
                     GroupId = _groupid,
-                    CameraSerialName = _camserial,
+                    CameraSerialNumber = _camserial,
                 };
                 ExcuteGroupDbProvider.EditGroupID(deletegroup);
             }

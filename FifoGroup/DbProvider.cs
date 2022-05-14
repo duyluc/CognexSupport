@@ -216,5 +216,15 @@ namespace FifoGroup
             }
 
         }
+        static public void DeleteAll<T>(string databaseFilePath, string tableName = "")
+        {
+            using(LiteDatabase db = new LiteDatabase(databaseFilePath))
+            {
+                ILiteCollection<T> col;
+                if (string.IsNullOrEmpty(tableName)) col = db.GetCollection<T>();
+                else col = db.GetCollection<T>(tableName);
+                col.DeleteAll();
+            }
+        }
     }
 }
