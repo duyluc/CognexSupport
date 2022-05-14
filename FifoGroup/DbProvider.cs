@@ -58,7 +58,7 @@ namespace FifoGroup
             }
         }
         //Generic Method
-        static public List<T> GGetRecords<T>(string databaseFilePath,string tableName = "")
+        static public List<T> GetRecords<T>(string databaseFilePath,string tableName = "")
         {
             if (databaseFilePath == null) throw new NullReferenceException(nameof(databaseFilePath));
             List<T> ExcuteGroupList = new List<T>();
@@ -71,7 +71,7 @@ namespace FifoGroup
             }
             return ExcuteGroupList;
         }
-        static public void GSaveRecord<T>(string databaseFilePath, T record, string tableName = "")
+        static public void SaveRecord<T>(string databaseFilePath, T record, string tableName = "")
         {
             if (databaseFilePath == null) throw new NullReferenceException(nameof(databaseFilePath));
             using (LiteDatabase db = new LiteDatabase(databaseFilePath))
@@ -82,11 +82,10 @@ namespace FifoGroup
                 col.Insert(record);
             }
         }
-        static public void GSaveUniqueRecord<T>(string databaseFilePath, T record,string property, string tableName = "")
+        static public void SaveUniqueRecord<T>(string databaseFilePath, T record,string property, string tableName = "")
         {
             if (databaseFilePath == null) throw new NullReferenceException(nameof(databaseFilePath));
             if(string.IsNullOrEmpty(property)) throw new NullReferenceException(nameof(property));
-
             PropertyInfo[] _propertyinfos = record.GetType().GetProperties();
             bool found = false;
             PropertyInfo _uniquePropertyInfo = null;
@@ -114,7 +113,7 @@ namespace FifoGroup
                 found = false;
                 foreach(T _record in _records)
                 {
-                    if (Convert.ChangeType(_uniquePropertyInfo.GetValue(_record), _uniquePropertyType) == Convert.ChangeType(_uniquePropertyValue, _uniquePropertyType))
+                    if (_uniquePropertyInfo.GetValue(_record).Equals(_uniquePropertyValue))
                     {
                         found = true;
                         break;
@@ -158,10 +157,10 @@ namespace FifoGroup
                 int _id = 0;
                 foreach (T _record in _records)
                 {
-                    if (Convert.ChangeType(_propertyInfo.GetValue(_record), _propertyType) == Convert.ChangeType(_propertyValue, _propertyType))
+                    if (_propertyInfo.GetValue(_record).Equals(_propertyValue))
                     {
                         found = true;
-                        _id = (int)(_propertyType.GetProperty("Id").GetValue(_record));
+                        _id = (int)(_record.GetType().GetProperty("Id").GetValue(_record));
                         break;
                     }
                 }
@@ -204,11 +203,11 @@ namespace FifoGroup
                 int _id = 0;
                 foreach (T _record in _records)
                 {
-                    if (Convert.ChangeType(_propertyInfo.GetValue(_record), _propertyType) == Convert.ChangeType(_propertyValue, _propertyType))
+                    if (_propertyInfo.GetValue(_record).Equals(_propertyValue))
                     {
                         found = true;
-                        _id = (int)(_propertyType.GetProperty("Id").GetValue(_record));
-                        _propertyType.GetProperty("Id").SetValue(record, _id);
+                        _id = (int)(_record.GetType().GetProperty("Id").GetValue(_record));
+                        record.GetType().GetProperty("Id").SetValue(record, _id);
                         break;
                     }
                 }

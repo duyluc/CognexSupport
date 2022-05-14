@@ -52,8 +52,8 @@
     <ShowAsAssociation>
       <Property Name="ExcuteGroup" />
       <Property Name="ExcuteToolParams" />
-      <Property Name="AcqFifo" />
       <Property Name="AcqFifoParams" />
+      <Property Name="AcqFifo" />
     </ShowAsAssociation>
   </Class>
   <Class Name="FifoGroup.Serialize">
@@ -96,14 +96,14 @@
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
     <NestedTypes>
-      <Class Name="FifoGroup.ExcuteGroupDbProvider.ExcuteGroupData" Collapsed="true">
+      <Class Name="FifoGroup.ExcuteGroupDbProvider.ExcuteGroupData">
         <TypeIdentifier>
           <NewMemberFileName>ExcuteGroupDbProvider.cs</NewMemberFileName>
         </TypeIdentifier>
       </Class>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAIAAACAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <HashCode>AAIAAACAAAAgAAABAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
       <FileName>ExcuteGroupDbProvider.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -118,12 +118,12 @@
           <NewMemberFileName>DbProvider.cs</NewMemberFileName>
         </TypeIdentifier>
       </Class>
-      <Class Name="FifoGroup.DbProvider.RecordNotExistException" Collapsed="true">
+      <Class Name="FifoGroup.DbProvider.RecordExstException" Collapsed="true">
         <TypeIdentifier>
           <NewMemberFileName>DbProvider.cs</NewMemberFileName>
         </TypeIdentifier>
       </Class>
-      <Class Name="FifoGroup.DbProvider.RecordExstException" Collapsed="true">
+      <Class Name="FifoGroup.DbProvider.RecordNotExistException" Collapsed="true">
         <TypeIdentifier>
           <NewMemberFileName>DbProvider.cs</NewMemberFileName>
         </TypeIdentifier>
