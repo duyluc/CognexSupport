@@ -17,10 +17,11 @@ namespace FifoGroup
             if(string.IsNullOrEmpty(serialNumber)) throw new ArgumentNullException(nameof(serialNumber));
             if(string.IsNullOrEmpty(vIDEO_FORMAT)) throw new ArgumentNullException(nameof(vIDEO_FORMAT));
             if(cameraPort<0) throw new ArgumentOutOfRangeException(nameof(cameraPort));
-            this.SerialNumber = serialNumber;
+            this.SerialNumber = serialNumber; 
             this.VIDEO_FORMAT = vIDEO_FORMAT;
             this.IMAGE_FORMAT = iMAGE_FORMAT;
             this.CameraPort = cameraPort;
         }
     }
+
 }

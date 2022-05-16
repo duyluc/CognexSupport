@@ -9,15 +9,21 @@ namespace Test_Console
 {
     internal class Program
     {
-        class person
-        {
-            public string Name { get; set; }
-        }
         static void Main(string[] args)
         {
-            person mperson = null;
-            Console.WriteLine(nameof(mperson));
+            List<string> list = new List<string>();
+            list.AddRange(new string[] {"11","22"});
+            test(list);
+            foreach(string a in list)
+            {
+                Console.WriteLine(a);
+            }
             Console.ReadKey();
+        }
+        static public void test(List<string> a)
+        {
+            a.Clear();
+            a.AddRange(new string[] { "1", "2", "3" });
         }
     }
 }

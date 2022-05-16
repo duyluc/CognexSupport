@@ -43,6 +43,9 @@
     <Reference Include="EditGroupTable.Ver3">
       <HintPath>..\EditGroupTable.Ver3\obj\Debug\EditGroupTable.Ver3.dll</HintPath>
     </Reference>
+    <Reference Include="EditGroupTable.Ver4">
+      <HintPath>..\EditGroupTable.Ver4\obj\Debug\EditGroupTable.Ver4.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

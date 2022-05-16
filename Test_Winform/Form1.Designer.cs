@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.EditGroupTable = new EditGroupTable.Ver3.EditGroupTable();
+            this.EditGroupTable = new EditGroupTable.Ver4.EditGroupTable();
             this.SuspendLayout();
             // 
             // EditGroupTable
             // 
-            this.EditGroupTable.BackupExcuteGoupDatas = null;
+            this.EditGroupTable.BackupGroupDatas = null;
             this.EditGroupTable.Location = new System.Drawing.Point(12, 12);
             this.EditGroupTable.Name = "EditGroupTable";
-            this.EditGroupTable.Size = new System.Drawing.Size(283, 306);
+            this.EditGroupTable.Size = new System.Drawing.Size(532, 306);
             this.EditGroupTable.TabIndex = 0;
             // 
             // Form1
@@ -53,7 +53,7 @@
 
         #endregion
 
-        private EditGroupTable.Ver3.EditGroupTable EditGroupTable;
+        private EditGroupTable.Ver4.EditGroupTable EditGroupTable;
     }
 }
 

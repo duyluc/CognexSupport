@@ -8,7 +8,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="FifoGroup.AcqFifoInfo">
-    <Position X="9.25" Y="7.25" Width="1.5" />
+    <Position X="9" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAAAAAgAAAAAAAAAAAAAEAAAAAAAAAAAAAAEA=</HashCode>
       <FileName>AcqFifoInfo.cs</FileName>
@@ -91,7 +91,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="FifoGroup.ExcuteGroupDbProvider">
-    <Position X="12" Y="1.5" Width="2" />
+    <Position X="12" Y="0.5" Width="2" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
@@ -103,7 +103,7 @@
       </Class>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAIAAACAAAAgAAABAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <HashCode>AAIAAACAAAAgAAABAAAAAIAAAAAAAAAAAAAAAAAgAAA=</HashCode>
       <FileName>ExcuteGroupDbProvider.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -130,8 +130,25 @@
       </Class>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAgIAAAAAAAAAAAAAAAAAAAAAAIAABAAAAAAAAAQA=</HashCode>
+      <HashCode>AAAAgAAAAoAAAAAgAAAAAAAAgAAAAAABAAAAAAAAAAA=</HashCode>
       <FileName>DbProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FifoGroup.AcqFifoInfoDbProvider">
+    <Position X="14.25" Y="0.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="FifoGroup.AcqFifoInfoDbProvider.AcqFifoDbData">
+        <TypeIdentifier>
+          <NewMemberFileName>AcqFifoInfoDbProvider.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAgAAAQARAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>AcqFifoInfoDbProvider.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
