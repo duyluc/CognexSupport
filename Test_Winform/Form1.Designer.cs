@@ -36,7 +36,7 @@
             this.EditGroupTable.BackupGroupDatas = null;
             this.EditGroupTable.Location = new System.Drawing.Point(12, 12);
             this.EditGroupTable.Name = "EditGroupTable";
-            this.EditGroupTable.Size = new System.Drawing.Size(532, 306);
+            this.EditGroupTable.Size = new System.Drawing.Size(706, 329);
             this.EditGroupTable.TabIndex = 0;
             // 
             // Form1

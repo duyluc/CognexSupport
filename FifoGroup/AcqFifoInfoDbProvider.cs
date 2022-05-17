@@ -6,7 +6,7 @@ using System.Text;
 
 namespace FifoGroup
 {
-    public class AcqFifoInfoDbProvider
+    public static class AcqFifoInfoDbProvider
     {
         public class AcqFifoDbData
         {

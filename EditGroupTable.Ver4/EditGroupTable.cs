@@ -13,6 +13,7 @@ namespace EditGroupTable.Ver4
 {
     public partial class EditGroupTable : UserControl
     {
+        public string ModelName { get; set; } = "Model1";
         public class GroupData
         {
             public string GroupId { get; set; }
@@ -53,7 +54,7 @@ namespace EditGroupTable.Ver4
             this.btnEdit.Enabled = true;
             try
             {
-                List<ExcuteGroupDbProvider.ExcuteGroupData> _groups = ExcuteGroupDbProvider.GetGroupIDs();
+                List<ExcuteGroupDbProvider.ExcuteGroupData> _groups = ExcuteGroupDbProvider.GetGroupIDs(ModelName);
                 List<AcqFifoInfoDbProvider.AcqFifoDbData> _infos = AcqFifoInfoDbProvider.GetAcqFifoInfos();
                 List<GroupData> groupdatas = CreateGroupData(_groups,_infos);
                 ShowGroup(groupdatas);
@@ -161,7 +162,7 @@ namespace EditGroupTable.Ver4
                 this.btnEdit.Enabled = true;
                 this.btnEdit.BackColor = Color.Transparent;
                 this.Datagridview.AllowUserToAddRows = false;
-                ExcuteGroupDbProvider.DeleteAllGroups();
+                ExcuteGroupDbProvider.DeleteAllGroups(ModelName);
                 AcqFifoInfoDbProvider.DeleteAllInfo();
                 if (this.Datagridview.Rows.Count != 0)
                     foreach (DataGridViewRow row in this.Datagridview.Rows)

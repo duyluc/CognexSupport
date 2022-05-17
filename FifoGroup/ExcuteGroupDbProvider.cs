@@ -19,32 +19,32 @@ namespace FifoGroup
             if (group == null) throw new NullReferenceException(nameof(group));
             DbProvider.SaveUniqueRecord(DatabaseFilePath, group, "GroupId");
         }
-        static public List<ExcuteGroupData> GetGroupIDs()
+        static public List<ExcuteGroupData> GetGroupIDs(string modelname)
         {
             if (!Directory.Exists(".\\Database")) throw new DbProvider.DatabaseNotExist();
             if (string.IsNullOrEmpty(DatabaseFilePath)) throw new NullReferenceException(nameof(DatabaseFilePath));
-            List<ExcuteGroupData> ExcuteGroupList = DbProvider.GetRecords<ExcuteGroupData>(DatabaseFilePath);
+            List<ExcuteGroupData> ExcuteGroupList = DbProvider.GetRecords<ExcuteGroupData>(DatabaseFilePath,modelname);
             return ExcuteGroupList;
         }
-        static public void DeleteGoupID(ExcuteGroupData group)
+        static public void DeleteGoupID(ExcuteGroupData group,string modelname)
         {
             if (!Directory.Exists(".\\Database")) throw new DbProvider.DatabaseNotExist();
             if (string.IsNullOrEmpty(DatabaseFilePath)) throw new NullReferenceException(nameof(DatabaseFilePath));
             if (group == null) throw new NullReferenceException(nameof(group));
-            DbProvider.DeleteRecord(DatabaseFilePath, group, "GroupId");
+            DbProvider.DeleteRecord(DatabaseFilePath, group, "GroupId", modelname);
         }
-        static public void EditGroupID(ExcuteGroupData group)
+        static public void EditGroupID(ExcuteGroupData group,string modelname)
         {
             if (!Directory.Exists(".\\Database")) throw new DbProvider.DatabaseNotExist();
             if (string.IsNullOrEmpty(DatabaseFilePath)) throw new NullReferenceException(nameof(DatabaseFilePath));
             if (group == null) throw new NullReferenceException(nameof(group));
-            DbProvider.EditRecord(DatabaseFilePath, group, "GroupId");
+            DbProvider.EditRecord(DatabaseFilePath, group, "GroupId",modelname);
         }
-        static public void DeleteAllGroups()
+        static public void DeleteAllGroups(string modelname)
         {
             if (!Directory.Exists(".\\Database")) throw new DbProvider.DatabaseNotExist();
             if (string.IsNullOrEmpty(DatabaseFilePath)) throw new NullReferenceException(nameof(DatabaseFilePath));
-            DbProvider.DeleteAll<ExcuteGroupData>(DatabaseFilePath);
+            DbProvider.DeleteAll<ExcuteGroupData>(DatabaseFilePath,modelname);
         }
     }
 }

@@ -7,12 +7,10 @@ namespace FifoGroup
 {
     public class AcqFifoParams
     {
+        
         public AcqFifoParams()
         {
             
         }
-
-        
     }
-
 }
